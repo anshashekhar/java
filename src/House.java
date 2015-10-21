@@ -5,12 +5,14 @@ public class House {
 	public String color = "";
 	public int numBedrooms;
 	public String address;
+	public String pens;
 	
-	public House(String nm, String clr, int numbed, String addr) {
+	public House(String nm, String clr, int numbed, String addr,String numpn) {
 		name = nm;
 		color = clr;
 		numBedrooms = numbed;
 		address = addr;
+		pens = numpn;
 	}
 	
 	public void print() {
@@ -19,5 +21,6 @@ public class House {
 		System.out.println("Num Bedrooms is "+numBedrooms);
 		System.out.println("Address is "+address);
 		System.out.println("--------------");
+		System.out.println("Num pens is "+pens);
 	}
 }
