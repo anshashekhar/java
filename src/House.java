@@ -24,3 +24,4 @@ public class House {
 		System.out.println("Num pens is "+pens);
 	}
 }
+
