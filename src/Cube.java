@@ -1,7 +1,13 @@
 
 public class Cube {
 
-	public double length;
+	private double length;
+	
+	public Cube(double l) {
+		length = l;
+	
+	}
+	
 	
 	public double getvolume() {
 		double volume = length * length * length;
