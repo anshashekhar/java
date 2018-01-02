@@ -1,3 +1,4 @@
+package basics;
 public class FindTotal { 
 	public static void main (String[] args)
 	{
