@@ -15,7 +15,7 @@ public class Time
 		Time t2 = new Time(3, 5, 8);
 		System.out.println(t2.toString());
 		
-		t2.resetTime(8, 9, 60);
+		t2.resetTime(23, 59, 59);
 		System.out.println(t2.toString());
 		
 		t2.increment();
@@ -46,10 +46,27 @@ public class Time
 		mins = m;
 		secs = s;
 	}
+	
 	public void increment()
 	{
-		secs = secs + 1;
-	}
-	
+		secs++;
 
+		if(secs>=59)
+		{
+			secs = 0;
+			mins++;
+		}
+		if(mins>=59)	
+		{
+			mins=0;
+			hrs++;
+		}
+		if(hrs>=24)	
+		{
+			hrs=0;
+		}
+    }
+
+  
 }
+
