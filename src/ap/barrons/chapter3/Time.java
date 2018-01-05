@@ -9,19 +9,31 @@ public class Time
 	
 	public static void main(String[] args)
 	{
+		
+		// constructors
 		Time t1 = new Time();
 		System.out.println(t1.toString());
 		
 		Time t2 = new Time(3, 5, 8);
 		System.out.println(t2.toString());
 		
+		// resetTime
 		t2.resetTime(23, 59, 59);
 		System.out.println(t2.toString());
 		
+		// increment
 		t2.increment();
 		System.out.println(t2.toString());
+		
+		// equals
+		Time t3 = new Time(3,5,8);
+		Time t4 = new Time(3,5,9);
+		
+		boolean result = t3.equals(t4);
+		System.out.println("Result of equals : " + result);
 	}
-	
+		
+
 	@Override
 	public String toString()
 	{
@@ -65,7 +77,18 @@ public class Time
 		{
 			hrs=0;
 		}
-    }
+	}
+	
+	public boolean equals(Time t)
+	{
+		if (t.hrs == hrs && t.mins == mins && t.secs == secs)
+		{
+			return true;
+		}
+		
+		return false;
+	}
+    
 
   
 }
