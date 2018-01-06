@@ -31,14 +31,18 @@ public class Time
 		
 		boolean result = t3.equals(t4);
 		System.out.println("Result of equals : " + result);
+		
+		// lessThan
+		Time t5 = new Time(3, 6, 8);
+		Time t6 = new Time (3, 6, 8);
+		
+		boolean result1 = t5.equals(t6);
+		System.out.println("Result f equals : " + result1);
+	
+		Time t7 = new Time(5, 30, 49);
+		System.out.println(t7.toString());
 	}
 		
-
-	@Override
-	public String toString()
-	{
-		return "hrs : "+hrs+ " mins : "+mins+" secs : "+secs;
-	}
 	public Time()
 	{
 		hrs = 0;
@@ -88,8 +92,42 @@ public class Time
 		
 		return false;
 	}
-    
-
-  
+	public boolean lessThan(Time t)
+	{
+		if (hrs > t.hrs)
+		{
+			return false;
+		}
+		if (hrs < t.hrs)	
+		{
+			return true;
+		}
+		
+		if (mins > t.mins)
+		{
+			return false;
+		}
+        if (mins < t.mins)
+        {
+        	return true;
+        }
+        if (secs > t.secs)
+        {
+        	return false;
+        }
+        if (secs > t.secs)
+        {
+        	return true;
+        }
+   
+        return false;
+	}
+	public String toString()
+	{ 
+		String str = hrs+":"+mins+":"+secs;
+		
+		return str;
+	}
+	
 }
 
